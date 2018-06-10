@@ -1,0 +1,42 @@
+<form class="form-horizontal col-sm-offset-3 col-sm-6">
+  <div>
+    <label class="col-sm-2 control-label">E-mail:</label>
+    <div class="col-sm-10">
+      <div class='${state.valid["email"] == false ? "form-group has-error" : state.valid["email"] == true ? "form-group has-success" : "form-group"}'>
+        <input class="form-control new-imput" placeholder="ex.: ted@mosby.com" type="email" key="email" value='${ state["email"] ? state.form["email"] : state.display["email"] }' on-keyup("handleChange", "email") on-blur("handleBlur", "email", "mail") on-focus("handleFocus", "email")/>
+        <span class="help-block">
+          <if(state.valid["email"] == false)>
+            <small class="text-danger"><i class="fa fa-exclamation-circle"></i> ${state.validMessage["email"]}</small>
+          </if>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <label for="inputPassword3" class="col-sm-2 control-label">Senha:</label>
+    <div class="col-sm-10">
+      <div class='${state.valid["password"] == false ? "form-group has-error" : state.valid["password"] == true ? "form-group has-success" : "form-group"}'>
+        <input class="form-control new-imput" placeholder="Insira a senha" type="password" key="password" value='${ state["password"] ? state.form["password"] : state.display["password"] }' on-keyup("handleChange", "password") on-blur("handleBlur", "password", "pass") on-focus("handleFocus", "password")/>
+        <span class="help-block">
+          <if(state.valid["password"] == false)>
+            <small class="text-danger"><i class="fa fa-exclamation-circle"></i> ${state.validMessage["password"]}</small>
+          </if>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-offset-2 col-sm-10">
+    <div class="form-group">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" key=""> Lembrar-me
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <div class="form-group pull-right">
+      <button type="button" on-click('login') class="btn btn-primary">Entrar</button>
+    </div>
+  </div>
+</form>

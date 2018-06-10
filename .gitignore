@@ -1,0 +1,45 @@
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.marko.js
+*.sublime-workspace
+*.sublime-project
+*.original
+*.report.html
+/lib-cov
+/pids
+/logs
+/results
+/build
+/.cache
+/node_modules
+/.idea
+npm-debug.log
+.env
+yarn.lock
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+*.marko.js
+/node_modules
+npm-debug.log
+*.log
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+static/*
+.cache/*
+cache/*
+sessions.json
+tmp/*
+# bower
+bower_components/*
+*.sh
+.imdone/config.json

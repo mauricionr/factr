@@ -1,0 +1,80 @@
+<include("app/layout/default/default")>
+  <@content>
+    <link rel="stylesheet" href="/app/pages/creditos/index.css" charset="utf-8">
+    <div class="col-lg-12" id="home-page">
+      <h1 class="page-header">${data.title}</h1>
+    </div>
+    <div class="col-lg-12" id="home-page">
+      <h3 class="page-header text-center">Extrato</h3>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-muted"><small><strong>Condômino</strong></small> Heric Alexandre Petrucci - Apto 16</h3>
+        <h3><small>Rua Alfredo Faria, 47 - Centro - Mogi das Cruzes - SP - CEP 08720-360 <br>
+        Telefones -  <strong>(11) 4666-7575   |   (11) 9-3232-1234 </strong><br>
+        <strong>Edifício Helbor Magestic</strong> </small></h3>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <form>
+        <div class="col-lg-2 col-xs-5 form-group">
+          <select class="form-control">
+            <option selected>Ago/2016</option>
+            <option>Set/2016</option>
+            <option>Out/2016</option>
+            <option>Nov/2016</option>
+            <option>Dez/2016</option>
+          </select>
+        </div>
+        <div class="col-xs-1 text-center text-muted">
+          <p class="align"> à </p>
+        </div>
+        <div class="col-lg-2 col-xs-5 form-group">
+          <select class="form-control">
+            <option>Jan/2017</option>
+            <option>Fev/2017</option>
+            <option>Mar/2017</option>
+            <option>Abr/2017</option>
+            <option>Mai/2017</option>
+            <option>Jun/2017</option>
+            <option selected>Jul/2017</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <hr>
+    <div class="table-responsive">
+      <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Registro</th>
+          <th>Data de transação</th>
+          <th>Lançamento</th>
+          <th>Tipo</th>
+          <th>Estabelecimento</th>
+          <th>Segmento</th>
+          <th>Número do Cupom</th>
+          <th>Valor da Compra</th>
+          <th>Crédito sobre Compra</th>
+          <th>Mês de Reembolso do Condômino</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr for(i in data.dados) >
+          <td>${i.id}</td>
+          <td>${i.data_transacao}</td>
+          <td>${i.lancamento}</td>
+          <td>${i.tipo}</td>
+          <td>${i.estabelecimento}</td>
+          <td>${i.segmento}</td>
+          <td>${i.num_cupom}</td>
+          <td class="text-right">R$ ${i.valor_compra}</td>
+          <td class="text-right">R$ ${i.credito_compra}</td>
+          <td>${i.mes_reembolso}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </@content>
+</include>

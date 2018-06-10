@@ -1,0 +1,48 @@
+<form on-submit('onSignup')>
+  <div class="col-xs-12">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label for="exampleInputEmail1">E-mail</label>
+        <div class='${state.valid["email"] == false ? "form-group has-error" : state.valid["email"] == true ? "form-group has-success" : "form-group"}'>
+          <input class="form-control" placeholder="ex.: barney@stinson.com" type="email" key="email" value='${ state["email"] ? state.form["email"] : state.display["email"] }' on-keyup("handleChange", "email") on-blur("handleBlur", "email", "mail") on-focus("handleFocus", "email")/>
+          <span class="help-block">
+            <if(state.valid["email"] == false)>
+              <small class="text-danger"><i class="fa fa-exclamation-circle"></i> ${state.validMessage["email"]}</small>
+            </if>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label for="password">Senha</label>
+        <div class='${state.valid["password"] == false ? "form-group has-error" : state.valid["password"] == true ? "form-group has-success" : "form-group"}'>
+          <input class="form-control" placeholder="Senha de no mínimo 6 caracteres" type="password" key="password" value='${ state["password"] ? state.form["password"] : state.display["password"] }'          on-keyup("handleChange", "password") on-blur("handleBlur", "password", "pass") on-focus("handleFocus", "password")/>
+          <span class="help-block">
+            <if(state.valid["password"] == false)>
+              <small class="text-danger"><i class="fa fa-exclamation-circle"></i> ${state.validMessage["password"]}</small>
+            </if>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label for="password_confirmation">Confirme a senha</label>
+        <div class='${state.valid["password_confirmation"] == false ? "form-group has-error" : state.valid["password_confirmation"] == true ? "form-group has-success" : "form-group"}'>
+          <input class="form-control" placeholder="Repita a senha" type="password" key="password_confirmation" value='${ state["password_confirmation"] ? state.form["password_confirmation"] : state.display["password_confirmation"] }' on-keyup("handleChange", "password_confirmation") on-blur("handleBlur", "password_confirmation", "rpass") on-focus("handleFocus", "password_confirmation") />
+          <span class="help-block">
+            <if(state.valid["password_confirmation"] == false)>
+              <small class="text-danger"><i class="fa fa-exclamation-circle"></i> ${state.validMessage["password_confirmation"]}</small>
+            </if>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <div class="form-group pull-right">
+        <button type="submit" on-click("onSignup") class="btn btn-primary">Enviar</button>
+      </div>
+    </div>
+  </div>
+</form>

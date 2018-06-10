@@ -1,0 +1,46 @@
+<div id="transactions">
+    <div class="transaction" for(tx in state.transactions)>
+        <div class="col-xs-1 col-md-1 text-left">
+        <i class={
+            'fa': true, 
+            'fa-minus-square': tx.minus,
+            'fa-plus-square': tx.plus
+        }></i>
+        </div>
+        <div class="col-xs-2 col-md-2 text-left">${tx.type}</div>
+        <div class="col-xs-5 col-md-7 dotted-line"></div>
+        <div class="col-xs-4 col-md-2 text-right">R$ ${tx.value}</div><br>                          
+        <div class="col-xs-12 col-md-12 top-space"></div> 
+    </div>
+    
+    <div class="transaction">
+        <div class="col-xs-1 col-md-1 text-left">
+        <i class="fa fa-plus-square"></i>
+        </div>
+        <div class="col-xs-2 col-md-2 text-left">Crédito</div>
+        <div class="col-xs-5 col-md-7 dotted-line"></div>
+        <div class="col-xs-4 col-md-2 text-right">R$ 1.500,00</div><br>                    
+        <div class="col-xs-12 col-md-12 top-space"></div> 
+    </div>
+
+     <div class="transaction">
+        <div class="col-xs-1 col-md-1 text-left">
+        <i class="fa fa-plus-square"></i>
+        </div>
+        <div class="col-xs-2 col-md-2 text-left">Crédito</div>
+        <div class="col-xs-5 col-md-7 dotted-line"></div>
+        <div class="col-xs-4 col-md-2 text-right">R$ 890,00</div><br>                    
+        <div  class="col-xs-12"> </div>   
+        <div class="col-xs-12 col-md-12 top-space"></div> 
+    </div>
+
+     <div class="transaction">
+        <div class="col-xs-1 col-md-1 text-left">
+        <i class="fa fa-minus-square"></i>
+        </div>
+        <div class="col-xs-2 col-md-2 text-left">Débito</div>
+        <div class="col-xs-5 col-md-7 dotted-line"></div>
+        <div class="col-xs-4 col-md-2 text-right">R$ 1.500,00</div><br>                          
+        <div class="col-xs-12 col-md-12 top-space"></div> 
+    </div>
+</div>

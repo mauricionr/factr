@@ -1,0 +1,56 @@
+<include("app/layout/default/default")>
+  <@content>
+    <div id="step1" class="text-center">
+      <div class="container">
+        <div class="col-md-12 col-md-offset-2 text-left">
+          <p>
+            <small>Bem vindo, </small> <username />
+          </p>
+          <p>Abaixo está o resumo da sua conta:</p>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+            <form name="transaction" id="transaction" novalidate>
+              <div class="row">
+                <div class="col-xs-4 col-md-4">
+                  <div class="form-group">
+                    <label for="valor"><small>Saldo:</small></label><input id="valor" class="form-control" readonly placeholder="R$ 150,00">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>        
+                <div class="col-xs-4 col-md-4">
+                  <div class="form-group">
+                    <label for="qtde">
+                      <small>Transações:</small>
+                    </label>
+                    <input id="qtde" class="form-control" readonly placeholder="2">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>            
+                <div class="col-xs-4 col-md-4">
+                  <div class="form-group">
+                    <label for="transacoes">
+                      <small>Valor Transações:</small>
+                    </label>
+                    <input id="transacoes" class="form-control" readonly placeholder="R$ 100,00">
+                </div>
+              </div> 
+              
+              <div class="col-xs-7 col-md-4 text-left">
+                Últimas transações
+              </div>
+
+              <div class="col-xs-5 col-md-8 text-right">
+                <i class="fa fa-exchange"></i>
+              </div>
+              
+              <div class="col-xs-12 col-md-12 top-space"></div> 
+              
+              <transactions />
+              <a href="/solicitar-pagamento" class="btn btn-default">Gerar Novo Pagamento</a>          
+            </div>
+            </form>
+        </div><br><br><br>
+        </div>
+    </div>
+  </@content>
+</include>

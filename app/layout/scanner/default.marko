@@ -1,0 +1,32 @@
+<lasso-page package-path="./browser.json"/>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Factr QRCode Scanner</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="QR Code Scanner is the fastest and most user-friendly web application."/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-title" content="QR Scanner"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#e4e4e4"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="application-name" content="QR Scanner"/>
+    <meta name="msapplication-TileColor" content="#e4e4e4"/>
+    <meta name="msapplication-TileImage" content="/images/touch/mstile-150x150.png"/>
+    <meta name="theme-color" content="#fff"/>
+    <link rel="apple-touch-icon" href="/images/touch/apple-touch-icon.jpg"/>
+    <link rel="icon" type="image/png" href="/images/touch/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="/images/touch/favicon-16x16.png" sizes="16x16"/>
+    <link rel="shortcut icon" href="/images/touch/favicon.ico"/>
+    <link rel="manifest" href="/manifest.json"/>
+    <link href="/client/css/scanner/scanner.css" rel="stylesheet"/>
+    <lasso-head />
+  </head>
+  <body class="scanner-background">
+    <include(input.content) />
+    <lasso-body />
+    <snack-bar />
+  </body>
+</html>

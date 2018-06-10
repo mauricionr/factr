@@ -1,0 +1,80 @@
+<style>
+    .top-progress-bar {
+    position:fixed;
+    top:0;
+    z-index:99999999;
+    height:2px;
+    background:#fff;
+    width:0;
+    -webkit-animation: progress 1s;
+    -moz-animation: progress 1s;
+    -o-animation: progress 1s;
+    animation: progress 1s;
+    }
+    .restart {
+    -webkit-animation: restart 1s;
+    -moz-animation: restart 1s;
+    -o-animation: restart 1s;
+    animation: restart 1s;
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    }
+
+    @keyframes restart { 
+    0%   {width: 0;}
+    100% {width: 50%;}
+    }
+
+    @-webkit-keyframes restart { 
+    0%   {width: 0;}
+    100% {width: 50%;}
+    }
+
+    @-moz-keyframes restart { 
+    0%   {width: 0;}
+    100% {width: 50%;}
+    }
+
+    @-o-keyframes restart { 
+    0%   {width: 0;}
+    100% {width: 50%;}
+    }
+
+    @keyframes progress {
+    0%   {width: 50%;}
+    100% {width: 100%;}
+    }
+
+    @-webkit-keyframes progress {
+    0%   {width: 50%;}
+    100% {width: 100%;}
+    }
+    @-moz-keyframes progress {
+    0%   {width: 50%;}
+    100% {width: 100%;}
+    }
+    @-o-keyframes progress {
+    0%   {width: 50%;}
+    100% {width: 100%;}
+    }
+    @media all and (display-mode: standalone) {*/
+
+        button:active, a:active, .button {background-color: blue}
+
+        button:active, a:active, .button {
+            background-color: #ccc;
+            box-shadow: 0 1px white;
+            transform: translateY(4px);
+        }
+    }
+
+</style>
+<div class="top-progress-bar"/>
+<script>
+    window.onbeforeunload = function(){
+    var p = document.querySelector('.top-progress-bar')
+    p.classList.add('restart')
+    }
+</script>

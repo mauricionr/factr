@@ -1,0 +1,41 @@
+<style>
+    .google-map{
+        height: 360px;
+    }
+</style>
+class {
+    onCreate(input){
+        this.state = {
+            address: input.address,
+            location: null
+        }
+    }
+    onMount(){
+        window.initMap = function(){
+            var map = new google.maps.Map(this.getEl('map'), {
+                zoom: 16
+            });
+            window.onload = function() {
+                var geocoder = new google.maps.Geocoder();
+                geocodeAddress.call(this, geocoder, map);
+            }.bind(this)
+
+        }.bind(this)
+
+        function geocodeAddress(geocoder, resultsMap) {
+            geocoder.geocode({'address': this.state.address}, function(results, status) {
+                if (status === 'OK') {
+                    resultsMap.setCenter(results[0].geometry.location);
+                    var marker = new google.maps.Marker({
+                        map: resultsMap,
+                        position: results[0].geometry.location
+                    });
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            }.bind(this));
+        }
+    }
+}
+<script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD3hFBq3yi5JRH4IftkGuKBP3oIm2Exy9Q&callback=initMap"/>
+<div key="map" class="google-map"/>

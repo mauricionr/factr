@@ -1,0 +1,61 @@
+<lasso-page package-path="./browser.json"/>
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Factr</title>
+    <meta name="description" content="Factr"/>
+    <meta name="theme-color" content="#03252b"/>
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="factr"/>
+    <meta itemprop="description" content="Factr"/>
+    <link rel="icon" href="/assets/favicon.ico"/>
+    <link rel="manifest" href="/manifest.json"/>
+    <script async="" src="https://www.google-analytics.com/analytics.js"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300" rel="stylesheet" type="text/css">
+    
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <lasso-head/>
+  </head>
+  <body id="page-top" data-spy="scroll" class={'default-background': !input.scanner, 'qrcode-background': input.scanner} data-target=".navbar-fixed-top">
+    <top-progress-bar />
+    <snack-bar />
+    <!-- Navigation -->
+    <menu />
+    <!-- Page Content -->
+    <div class="container">
+      <include(input.content)/>
+    </div>
+    <!-- /.container -->
+    <script>
+      if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js?version=1.0.0').then(function(registration) {
+            var key = 'noticed_offline'
+            var noticed = localStorage.getItem(key);
+            if(!noticed){
+              toastMessage('Ready to work offline');
+              localStorage.setItem(key, true);
+            }
+          }, function(err){
+            toastMessage('service worker registration failed')
+          });
+        });
+      }
+    </script>
+    <lasso-body/>
+    <script>
+      if(window.location.hostname.indexOf('factr-app.azurewebsites.net') > -1 && window.location.protocol === 'http:'){
+        window.location.assign('https://' + window.location.hostname + window.location.pathname)
+      }
+    </script>
+  </body>
+</html>

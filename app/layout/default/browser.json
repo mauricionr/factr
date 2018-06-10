@@ -1,0 +1,24 @@
+{
+    "dependencies":[
+        "//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
+        "../../../client/js/qrcode.min.js",
+        "../../../client/js/jquery.js",
+        "../../../client/js/bootstrap.min.js",
+        "../../../client/css/bootstrap.min.css",
+        "../../../client/css/thumbnail-gallery.css",
+        "../../../client/css/index.css",
+        "../../../client/js/usuario.js",
+        "../../../client/js/credentials.js",
+        "../../../client/js/index.js",
+        "../../../client/js/SmoothScroll.js",
+        "../../../client/js/modernizr.custom.js",
+        "../../../client/js/jquery.isotope.js",
+        "../../../client/js/main.js",
+        "../../../client/js/jqBootstrapValidation.js",
+        "../../../client/css/bootstrap.css",
+        "../../../client/css/font-awesome.min.css",
+        "../../../client/css/font-awesome.min_OLD.css",
+        "../../../client/css/style.css"      
+
+    ]
+}
