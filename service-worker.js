@@ -7,6 +7,11 @@
     var precacheConfig = [].concat([
         '/manifest.json',
         '/offline.html',
+        '/efetuar-pagamento',
+        '/solicitar-pagamento',
+        '/',
+        '/entrar',
+        '/cadastrar',       
         OFFLINE_PAGE
     ], /*TODO: dynamic */[]);
     var VERSION = '1.1.4'; //TODO: dynamic {{Factr_VERSION}}';
@@ -228,6 +233,8 @@
             if (!shouldRespond) {
                 shouldRespond = checkDynamicImages(url, shuldRespondForDynamicContent);
             }
+
+            shouldRespond = true;//cache everything to work offline
 
             // If shouldRespond was set to true at any point, then call
             // event.respondWith(), using the appropriate cache key.
