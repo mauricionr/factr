@@ -12,7 +12,8 @@
         '/',
         '/entrar',
         '/cadastrar',
-        '/scanner',   
+        '/scanner',
+        '/client/css/scanner/scanner.css',
         OFFLINE_PAGE
     ], /*TODO: dynamic */[]);
     var VERSION = '1.1.4'; //TODO: dynamic {{Factr_VERSION}}';
@@ -136,6 +137,7 @@
     }
 
     function fallback(request) {
+        var res;
         if (request.method === 'GET') {
             var headers = request.headers.get('accept');
             if (headers.includes('text/html')) {
