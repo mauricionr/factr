@@ -103,7 +103,6 @@
             let data = value.split(':');
             let amount = data[0];
             let trustIdTo = data[1];
-            debugger;
             let newTx = {
                 "trustID": "gfhfghfdbdbdf",
                 "password": "asddfghfhersfsasdasdsa",
@@ -119,23 +118,24 @@
             //suport da microsfot disse para cricar uma maquina virtual com mysql, problema que preciso de
             //certificado para o protocolo https.
 
-            fetch('https://191.237.252.61:8443/api/transactions/dfgtfhuyjgyhbfthjug', {
-                method: 'POST',
-                headers: {
-                    "Accept": "application/json"
-                },
-                body: JSON.stringify([
+            // fetch('https://191.237.252.61:8443/api/transactions/dfgtfhuyjgyhbfthjug', {
+            //     method: 'POST',
+            //     headers: {
+            //         "Accept": "application/json"
+            //     },
+            //     body: JSON.stringify([
                     
-                ])
-            })
-            .then(stream => stream.json())
-            .then(response => {
-                window.location.assign('/sucesso-pagamento');
-            })
-            .catch(reason => {
-                window.location.assign('/sucesso-pagamento');
-            })
-            console.log('Valor:', value);
+            //     ])
+            // })
+            // .then(stream => stream.json())
+            // .then(response => {
+            //     window.location.assign('/sucesso-pagamento');
+            // })
+            // .catch(reason => {
+            //     window.location.assign('/sucesso-pagamento');
+            // })
+            // console.log('Valor:', value);
+            window.location.assign('/sucesso-pagamento');
         }
 
         var r = null,
