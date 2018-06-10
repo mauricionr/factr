@@ -11,7 +11,8 @@
         '/solicitar-pagamento',
         '/',
         '/entrar',
-        '/cadastrar',       
+        '/cadastrar',
+        '/scanner',   
         OFFLINE_PAGE
     ], /*TODO: dynamic */[]);
     var VERSION = '1.1.4'; //TODO: dynamic {{Factr_VERSION}}';
