@@ -14,7 +14,26 @@
         '/cadastrar',
         '/scanner',
         '/client/css/scanner/scanner.css',
-        OFFLINE_PAGE
+        "/client/js/jquery.js",
+        "/client/js/usuario.js",
+        "/client/js/credentials.js",
+        "/client/js/index.js",
+        "/client/js/scanner/scanner.js",
+        "/client/js/qrcode.min.js",
+        "/client/js/bootstrap.min.js",
+        "/client/css/bootstrap.min.css",
+        "/client/css/thumbnail-gallery.css",
+        "/client/css/index.css",
+        "/client/js/SmoothScroll.js",
+        "/client/js/modernizr.custom.js",
+        "/client/js/jquery.isotope.js",
+        "/client/js/main.js",
+        "/client/js/jqBootstrapValidation.js",
+        "/client/css/font-awesome.min.css",
+        "/client/css/font-awesome.min_OLD.css",
+        "/client/css/style.css",   
+        OFFLINE_PAGE,
+        "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
     ], /*TODO: dynamic */[]);
     var VERSION = '1.1.4'; //TODO: dynamic {{Factr_VERSION}}';
     var cacheName = 'Factr-client-' + VERSION + '-' + (self.registration ? self.registration.scope : '');
