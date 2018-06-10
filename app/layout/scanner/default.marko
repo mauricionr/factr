@@ -1,5 +1,3 @@
-<lasso-page package-path="./browser.json"/>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,11 +20,53 @@
     <link rel="shortcut icon" href="/images/touch/favicon.ico"/>
     <link rel="manifest" href="/manifest.json"/>
     <link href="/client/css/scanner/scanner.css" rel="stylesheet"/>
-    <lasso-head />
+    <link href="/client/css/index.css" rel="stylesheet"/>
+    <link href="/client/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   </head>
   <body class="scanner-background">
-    <include(input.content) />
-    <lasso-body />
+    <div class="app__layout">
+      <!-- Header -->
+      <main class="app__layout-content">
+        <video autoplay/>
+        <!-- Dialog  -->
+        <div class="app__dialog app__dialog--hide">
+          <div class="app__dialog-content">
+            <h5>QR Code</h5>
+            <input type="text" id="result"/>
+          </div>
+          <div class="app__dialog-actions">
+            <button type="button" class="app__dialog-open">Open</button>
+            <button type="button" class="app__dialog-close">Close</button>
+          </div>
+        </div>
+        <div class="app__dialog-overlay app__dialog--hide"/>
+        <!-- Snackbar -->
+        <div class="app__snackbar"/>
+      </main>
+    </div>
+    <div class="app__overlay">
+      <div class="app__overlay-frame"/>
+      <!-- Scanner animation -->
+      <div class="custom-scanner"/>
+      <div class="app__help-text"></div>
+      <div class="app__select-photos">Select from photos</div>
+    </div>
+    <style>
+      .back {
+        left: 20px;
+        color: #fff;
+        border: 1px solid;
+        border-radius: 20px 20px;
+      }
+    </style>
+    <script src="/client/js/qrcode.min.js"></script>
+    <script src="/client/js/jquery.js"></script>
+    <script src="/client/js/bootstrap.min.js"></script>
+    <script src="/client/js/usuario.js"></script>
+    <script src="/client/js/credentials.js"></script>
+    <script src="/client/js/index.js"></script>
+    <script src="/client/js/scanner/scanner.js"></script>
     <snack-bar />
   </body>
 </html>
